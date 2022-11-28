@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package common;
+
+option java_package = "org.example.protobuf.models.common";
+option java_multiple_files = true;
+
+message Car {
+  string brand = 1;
+  string model = 2;
+  BodyType body_type = 3;
+}
+
+enum BodyType {
+  UNKNOWN = 0;
+  HATCHBACK = 1;
+  SEDAN = 2;
+  COUPE = 3;
+  SUV = 4;
+}
